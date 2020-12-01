@@ -10,4 +10,15 @@ const decodedSecret = encrypted(
 
 The encryption secret is `process.env.ENCRYPTION_SECRET`.
 
-Generating secret:
+Generating secret programmatically:
+
+```js
+const { encrypt } = require('@dtinth/encrypted')()
+encrypt({ thing: 'to encrypt' })
+```
+
+Generating secret with a CLI:
+
+```sh
+echo '{"thing":"to encrypt"}' | npx -p @dtinth/encrypted encrypt-json
+```
