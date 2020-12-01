@@ -9,6 +9,11 @@
   "bin": {
     "encrypt-json": "./encrypt.js"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "encrypt.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtinth/encrypted.git"
