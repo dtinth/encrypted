@@ -4,7 +4,10 @@
   "description": "Encrypted JSON blob with a shared key. Thin wrapper around tweetnacl-js.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "env ENCRYPTION_SECRET=XY0GiHz+mzZsNWP78v4fVdsoIFkfadNNh+kKuKRJUSI= node test.js"
+  },
+  "bin": {
+    "encrypt-json": "./encrypt.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "dependencies": {
     "@types/node": "*",
+    "dotenv": "^8.2.0",
     "tweetnacl": "^1.0.3"
   }
 }
