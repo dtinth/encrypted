@@ -1,0 +1,11 @@
+{
+  "include": ["index.js"],
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
+  }
+}
