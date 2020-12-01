@@ -6,7 +6,15 @@ process.stdin.on('data', (b) => {
   bufs.push(b)
 })
 process.stdin.on('end', () => {
-  const thing = JSON.parse(Buffer.concat(bufs).toString())
+  let thing
+  const str = Buffer.concat(bufs).toString()
+  try {
+    thing = JSON.parse(str)
+    console.error('* Encrypting JSON object')
+  } catch (error) {
+    thing = str
+    console.error('* Encrypting string')
+  }
   const text = encrypt(thing)
   const prefix = 'encrypted(`'
   const wrapLength = 72
