@@ -16,18 +16,16 @@ process.stdin.on('end', () => {
     console.error('* Encrypting string')
   }
   const text = encrypt(thing)
-  const prefix = 'encrypted(`'
+  const prefix = 'encrypted(`\n'
   const wrapLength = 72
-  let remainingSize = wrapLength - prefix.length
   let i = 0
   const out = [prefix]
   while (i < text.length) {
     if (i > 0) out.push('\n')
-    const chunk = text.substr(i, remainingSize)
+    const chunk = text.substr(i, wrapLength)
     out.push(chunk)
-    i += remainingSize
-    remainingSize = wrapLength
+    i += wrapLength
   }
-  out.push('`)')
+  out.push('\n`)')
   console.log(out.join(''))
 })
