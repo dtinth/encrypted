@@ -3,8 +3,19 @@ const nacl = require('tweetnacl')
 
 /**
  * @param {string} secret
+ *  The pre-shared key used for encrypting/decrypting data using symmetric encryption.
+ * @param {string} privateKey
+ *  The private key used for decrypting data using asymmetric encryption.
+ * @param {string} publicKey
+ *  The pre-shared key used for encrypting data using asymmetric encryption.
+ *  It should correspond to `privateKey`.
+ *  If both `publicKey` and `secret` is specified, `publicKey` is preferred.
  */
-function Encrypted(secret = getDefaultEncryptionSecret()) {
+function Encrypted(
+    secret = process.env.ENCRYPTION_SECRET,
+    privateKey = process.env.ENCRYPTION_PRIVATE_KEY,
+    publicKey = process.env.ENCRYPTION_PUBLIC_KEY,
+) {
   const secretBuffer = Buffer.from(secret, 'base64')
 
   /**
