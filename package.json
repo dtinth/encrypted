@@ -1,6 +1,6 @@
 {
   "name": "@dtinth/encrypted",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Encrypted JSON blob with a shared key. Thin wrapper around tweetnacl-js.",
   "main": "index.js",
   "scripts": {
