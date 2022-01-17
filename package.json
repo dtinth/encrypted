@@ -12,6 +12,8 @@
   "files": [
     "index.js",
     "index.d.ts",
+    "api.d.ts",
+    "encrypted.api.json",
     "encrypt.js"
   ],
   "repository": {
@@ -32,5 +34,6 @@
     "@types/node": "*",
     "dotenv": "^8.2.0",
     "tweetnacl": "^1.0.3"
-  }
+  },
+  "docModel": "encrypted.api.json"
 }
