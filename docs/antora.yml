@@ -1,3 +1,5 @@
 name: encrypted
 version: master
 title: '@dtinth/encrypted'
+nav:
+  - modules/ROOT/nav.adoc
