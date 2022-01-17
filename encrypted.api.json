@@ -1,0 +1,349 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.19.4",
+    "schemaVersion": 1004,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      }
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@dtinth/encrypted!",
+  "docComment": "/**\n * A convenient module to let you store keys directly inside source code in encrypted form.\n *\n * @remarks\n *\n * This package comes with a CLI to let you easily encrypt things from the command line. For more information, please check out the project documentation at {@link https://docs.dt.in.th/encrypted/}.\n *\n * Note: This module trades security for convenience. Please exercise caution when using this module.\n *\n * @example\n *\n * Using the this package to store keys directly inside source code in encrypted form:\n * ```\n * const encrypted = require('@dtinth/encrypted')()\n * const accessKeyId = encrypted(`\n * H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV\n * 96ygthjpFBlQ=\n * `)\n * const secretAccessKey = encrypted(`\n * pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweWkty/OSqppfOcbTEGn0jmdoHy+6fCkV0cni\n * j9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSFA==\n * `)\n * ```\n *\n * The encryption keys will be loaded from the environment variable `ENCRYPTION_SECRET`.\n *\n * @packageDocumentation\n */\n",
+  "name": "@dtinth/encrypted",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@dtinth/encrypted!",
+      "name": "",
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@dtinth/encrypted!CipherDecipher:interface",
+          "docComment": "/**\n * An object generated by the {@link Encrypted} function that can be used to encrypt and decrypt any JSON-serializable data. This object has already been configured with a key when it was created.\n *\n * @remarks\n *\n * This object is callable. If called directly, it will call the {@link CipherDecipher.decrypt} function.\n *\n * @example\n *\n * Using the this package to store keys directly inside source code in encrypted form:\n * ```\n * const encrypted = require('@dtinth/encrypted')()\n * const accessKeyId = encrypted(`\n * H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV\n * 96ygthjpFBlQ=\n * `)\n * const secretAccessKey = encrypted(`\n * pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweWkty/OSqppfOcbTEGn0jmdoHy+6fCkV0cni\n * j9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSFA==\n * `)\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CipherDecipher "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "CipherDecipher",
+          "members": [
+            {
+              "kind": "CallSignature",
+              "canonicalReference": "@dtinth/encrypted!CipherDecipher:call(1)",
+              "docComment": "/**\n * Decrypts the data.\n *\n * @param payload - The encrypted payload\n *\n * @returns The decrypted data, which can be any JSON-serializable data\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "(payload: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "payload",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@dtinth/encrypted!CipherDecipher#decrypt:member(1)",
+              "docComment": "/**\n * Decrypts the data.\n *\n * @param payload - The encrypted payload\n *\n * @returns The decrypted data, which can be any JSON-serializable data\n *\n * @example\n * ```\n * encrypted.decrypt(\"H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV96ygthjpFBlQ=\")\n * // => \"AKIAYVP4CIPPB7TRITNC\"\n * ```\n *\n * You can also call the `encrypted` object directly:\n * ```\n * encrypted(\"H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV96ygthjpFBlQ=\")\n * // => \"AKIAYVP4CIPPB7TRITNC\"\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "decrypt(payload: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "payload",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "decrypt"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@dtinth/encrypted!CipherDecipher#encrypt:member(1)",
+              "docComment": "/**\n * Encrypts the data.\n *\n * @param data - The data to encrypt, which can be any JSON-serializable data\n *\n * @returns The encrypted payload, a string\n *\n * @example\n * ```\n * encrypted.encrypt(\"AKIAYVP4CIPPB7TRITNC\")\n * // => \"H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV96ygthjpFBlQ=\"\n * ```\n *\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "encrypt(data: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "data",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ],
+              "name": "encrypt"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@dtinth/encrypted!Encrypted:function(1)",
+          "docComment": "/**\n * Creates a {@link CipherDecipher} instance.\n *\n * @remarks\n *\n * This module is a CommonJS module. Use it from CommonJS code like this:\n * ```\n * const encrypted = require('@dtinth/encrypted')()\n * ```\n *\n * To use it in a ES modules, import it like this:\n * ```\n * import Encrypted from '@dtinth/encrypted'\n * const encrypted = Encrypted()\n * ```\n *\n * @param psk - A pre-shared key. If not specified, the key will be loaded from the environment variable `ENCRYPTION_SECRET`. If that is not set, an error will be thrown. You can generate a random key from {@link https://tweetnacl.js.org/#/secretbox | TweetNaCl.js’s website} or run `openssl rand -base64 32`.\n *\n * @returns An object that can be used to encrypt and decrypt data\n *\n * @example\n *\n * Create a {@link CipherDecipher} instance using the key specified in the environment variable `ENCRYPTION_SECRET`\n * ```\n * const encrypted = require('@dtinth/encrypted')()\n * ```\n *\n * Note: If the environment variable is not set, an error will be thrown.\n *\n * @example\n *\n * Create a {@link CipherDecipher} instance using a specified pre-shared key\n * ```\n * const encrypted = require('@dtinth/encrypted')('XY0GiHz+mzZsNWP78v4fVdsoIFkfadNNh+kKuKRJUSI=')\n * ```\n *\n * @public\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export function Encrypted(psk?: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "CipherDecipher",
+              "canonicalReference": "@dtinth/encrypted!CipherDecipher:interface"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "psk",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "Encrypted"
+        }
+      ]
+    }
+  ]
+}

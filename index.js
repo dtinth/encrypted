@@ -37,7 +37,7 @@ function Encrypted(secret = getDefaultEncryptionSecret()) {
     )
   }
 
-  return Object.assign(decrypt, { encrypt })
+  return Object.assign(decrypt, { decrypt, encrypt })
 }
 
 function getDefaultEncryptionSecret(envName = 'ENCRYPTION_SECRET') {

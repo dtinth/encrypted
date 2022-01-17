@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/dtinth/encrypted#readme",
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.19.4",
     "typescript": "^4.1.2"
   },
   "dependencies": {
