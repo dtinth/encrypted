@@ -8,6 +8,11 @@ const assert = require('assert')
     ),
     { meow: 'It works' }
   )
+  assert.deepStrictEqual(
+    encrypted`BarWjHyYfhOowXguGxMQiUrMpDO2xwgM./5Ibctetf70d8rfZvESJbBUfFJ9D78gO
+    DjJqxXPFAfPbpfc=`,
+    { meow: 'It works' }
+  )
 }
 
 {

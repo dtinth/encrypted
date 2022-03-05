@@ -9,14 +9,11 @@
  * @example Using the this package to store keys directly inside source code in encrypted form:
  * ```
  * const encrypted = require('@dtinth/encrypted')()
- * const accessKeyId = encrypted(`
- * H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV
- * 96ygthjpFBlQ=
- * `)
- * const secretAccessKey = encrypted(`
- * pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweWkty/OSqppfOcbTEGn0jmdoHy+6fCkV0cni
- * j9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSFA==
- * `)
+ * const accessKeyId = encrypted`H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igr
+ * h8hzoKG9zGv1t9rmrUZ4PYftuOy3lV96ygthjpFBlQ=`
+ * const secretAccessKey = encrypted`pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweW
+ * kty/OSqppfOcbTEGn0jmdoHy+6fCkV0cnij9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSF
+ * A==`
  * ```
  * The encryption keys will be loaded from the environment variable `ENCRYPTION_SECRET`.
  * @packageDocumentation
@@ -63,14 +60,11 @@ export function Encrypted(psk?: string): CipherDecipher
  * @example Using the this package to store keys directly inside source code in encrypted form:
  * ```
  * const encrypted = require('@dtinth/encrypted')()
- * const accessKeyId = encrypted(`
- * H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8hzoKG9zGv1t9rmrUZ4PYftuOy3lV
- * 96ygthjpFBlQ=
- * `)
- * const secretAccessKey = encrypted(`
- * pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweWkty/OSqppfOcbTEGn0jmdoHy+6fCkV0cni
- * j9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSFA==
- * `)
+ * const accessKeyId = encrypted`H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igr
+ * h8hzoKG9zGv1t9rmrUZ4PYftuOy3lV96ygthjpFBlQ=`
+ * const secretAccessKey = encrypted`pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweW
+ * kty/OSqppfOcbTEGn0jmdoHy+6fCkV0cnij9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSF
+ * A==`
  * ```
  *
  * @public
@@ -82,6 +76,13 @@ export interface CipherDecipher {
    * @returns The decrypted data, which can be any JSON-serializable data
    */
   (payload: string): any
+
+  /**
+   * Decrypts the data.
+   * @param payload - The encrypted payload
+   * @returns The decrypted data, which can be any JSON-serializable data
+   */
+  (payload: [string]): any
 
   /**
    * Decrypts the data.

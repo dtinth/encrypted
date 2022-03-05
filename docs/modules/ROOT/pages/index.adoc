@@ -46,6 +46,14 @@ Require the `@dtinth/encrypted` package and use the generated code. When the cod
 ----
 const encrypted = require('@dtinth/encrypted')()
 
+const decodedSecret = encrypted`BarWjHyYfhOowXguGxMQiUrMpDO2xwgM./5Ibcte
+tf70d8rfZvESJbBUfFJ9D78gODjJqxXPFAfPbpfc=`
+----
+
+[source,js]
+----
+const encrypted = require('@dtinth/encrypted')()
+
 const decodedSecret = encrypted(
   'BarWjHyYfhOowXguGxMQiUrMpDO2xwgM./5Ibctetf70d8rfZvESJbBUfFJ9D78gODjJqxXPFAfPbpfc='
 )

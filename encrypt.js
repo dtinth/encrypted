@@ -16,8 +16,9 @@ process.stdin.on('end', () => {
     console.error('* Encrypting string')
   }
   const text = encrypt(thing)
-  const prefix = 'encrypted(`\n'
-  const wrapLength = 72
+  const prefix = 'encrypted`'
+  const lineLength = 72
+  let wrapLength = 72 - prefix.length
   let i = 0
   const out = [prefix]
   while (i < text.length) {
@@ -25,7 +26,8 @@ process.stdin.on('end', () => {
     const chunk = text.substr(i, wrapLength)
     out.push(chunk)
     i += wrapLength
+    wrapLength = lineLength
   }
-  out.push('\n`)')
+  out.push('`')
   console.log(out.join(''))
 })

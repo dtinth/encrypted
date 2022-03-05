@@ -6,6 +6,19 @@ form.
 
 ## Example
 
+Use as a tagged template literal:
+
+```js
+const encrypted = require('@dtinth/encrypted')()
+
+const accessKeyId = encrypted`H7WwoocLJnbDgKk1+5vH47JvLp49FQZn.0KlZf2igrh8
+hzoKG9zGv1t9rmrUZ4PYftuOy3lV96ygthjpFBlQ=`
+const secretAccessKey = encrypted`pg2ozvrK9nun1TGuycfCAV50qgjdgc3Y.WSweWkt
+y/OSqppfOcbTEGn0jmdoHy+6fCkV0cnij9S7UVC0rihIygjFZ5S8TBYd8+Rl8LEKLDDuSFA==`
+```
+
+Use as a function:
+
 ```js
 const encrypted = require('@dtinth/encrypted')()
 

@@ -8,9 +8,15 @@ function Encrypted(secret = getDefaultEncryptionSecret()) {
   const secretBuffer = Buffer.from(secret, 'base64')
 
   /**
-   * @param {string} ciphertext
+   * @param {string | [string]} ciphertext
    */
   function decrypt(ciphertext) {
+    if (Array.isArray(ciphertext)) {
+      if (ciphertext.length > 1) {
+        throw new Error('Interpolations are not supported in ciphertext')
+      }
+      ciphertext = ciphertext[0]
+    }
     const parts = ciphertext.split('.')
     return JSON.parse(
       Buffer.from(
