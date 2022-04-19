@@ -82,7 +82,7 @@ export interface CipherDecipher {
    * @param payload - The encrypted payload
    * @returns The decrypted data, which can be any JSON-serializable data
    */
-  (payload: [string]): any
+  (payload: TemplateStringsArray): any
 
   /**
    * Decrypts the data.
