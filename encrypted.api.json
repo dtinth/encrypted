@@ -230,8 +230,9 @@
                   "text": "(payload: "
                 },
                 {
-                  "kind": "Content",
-                  "text": "[string]"
+                  "kind": "Reference",
+                  "text": "TemplateStringsArray",
+                  "canonicalReference": "!TemplateStringsArray:interface"
                 },
                 {
                   "kind": "Content",
