@@ -45,3 +45,5 @@ For more information, check out the
 ## API reference
 
 <https://apiref.page/package/@dtinth/encrypted>
+
+![API reference screenshot](https://ss.dt.in.th/api/screenshots/apiref-dtinth-encrypted.png)
