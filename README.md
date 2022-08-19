@@ -46,4 +46,4 @@ For more information, check out the
 
 <https://apiref.page/package/@dtinth/encrypted>
 
-![API reference screenshot](https://ss.dt.in.th/api/screenshots/apiref-dtinth-encrypted.png)
+[![API reference screenshot](https://ss.dt.in.th/api/screenshots/apiref-dtinth-encrypted.png)](https://apiref.page/package/@dtinth/encrypted)
